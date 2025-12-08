@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+:root {
+    --fontePrimaria: "Nunito", sans-serif;
+    --fonteDecorativa: "Delius Swash Caps", cursive;
+    --fontSizeTitulo: 140px;
+    --fontSizeSubtitulo: 60px;
+    --fontSizeParagrafo: 20px;
+    --fontSizeDetalhe: 17px;
+    --corClara: #F2F2F0;
+    --corLaranja: #ec8a51;
+    --corVerde1: #cfffdf;
+    --corVerde2: #d0e584;
+    --corVerde3: #24574e;
+    --corLavanda: #7a57ac;
+    --corEscura: #592203; 
+    --corMaisEscura: #29203c;
+    --corBranco: #ffffff;
+}
+
+body{
+    background-color: var(--corClara);
+    color: var(--corMaisEscura);
+}
+
+section{
+    padding: 30px 5%;
+}
+
+img {
+    max-height: 300px;
+}

@@ -1,0 +1,31 @@
+#cadastro{
+    padding: 120px 20px 40px;
+}
+.cadastroContainer{
+    padding: 50px 400px;
+    background-color: var(--corLaranja);
+    color: var(--corClara);
+}
+.auth-card input {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--corVerde2);
+    background-color: var(--corVerde1);
+    color: var(--corEscura);
+    font-weight: bold;
+    font-size: large;
+
+    margin-bottom: 14px;
+}
+.auth-btn {
+    width: 100%;
+    background: var(--corLavanda);
+    color: var(--corClara);
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
