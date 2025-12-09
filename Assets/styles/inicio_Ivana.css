@@ -1,0 +1,211 @@
+/* =====================================
+   ESTILO ECOCARE - CSS COMPLETO
+   Verde + Azul Suave + Tons Terrosos
+   Feito à mão, mantendo seu estilo
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* VARIÁVEIS DE CORES */
+:root {
+    --verde-suave: #7dcf9b;
+    --azul-suave: #8cc7e6;
+    --terracota: #c49a6c;
+    --marrom-claro: #e9d9c5;
+    --texto-escuro: #2e2e2e;
+}
+
+/* BODY */
+body {
+    background: #f4f7f2;
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    padding: 25px;
+    background: var(--verde-suave);
+    color: white;
+    text-align: center;
+    border-bottom: 6px dotted var(--marrom-claro);
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* SEÇÕES */
+section {
+    position: relative;
+    padding: 50px 10%;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 12px;
+    border: 3px solid var(--marrom-claro);
+    background-size: cover;
+    background-position: center;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    color: var(--terracota);
+}
+
+/* Overlay semi-transparente (exceto infográfico) */
+section:not(.infografico)::before {
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(255,255,255,0.7);
+    border-radius: 12px;
+    z-index:0;
+}
+
+section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* LISTAS */
+ul {
+    margin-left: 20px;
+}
+
+/* ESTATÍSTICAS */
+.estatisticas {
+    padding: 25px;
+    background: var(--azul-suave);
+    border-radius: 15px;
+    color: white;
+    animation: ecoPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes ecoPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0.1); }
+    50% { transform: scale(1.02); box-shadow: 0 0 15px rgba(0,0,0,0.15); }
+    100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0.1); }
+}
+
+/* PRODUTOS - GRID */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.produto {
+    border: 1px solid var(--marrom-claro);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.produto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.produto a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--verde-suave);
+    font-weight: 500;
+}
+
+.produto a:hover {
+    color: var(--terracota);
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--terracota);
+    color: white;
+    border-top: 7px dotted var(--marrom-claro);
+}
+
+/* PARALLAX SEÇÕES */
+#hero { 
+    background: url('/img/bg-eco.jpg') center/cover no-repeat fixed;
+}
+.missao { 
+    background: url('./img/bg-missao.jpg') center/cover no-repeat fixed;
+}
+.visao { 
+    background: url('./img/bg-visao.jpg') center/cover no-repeat fixed;
+}
+.proposito { 
+    background: url('./img/bg-proposito.jpg') center/cover no-repeat fixed;
+}
+
+/* INFOGRÁFICO ESTILO FEITO À MÃO - MENOR */
+.infografico {
+    background: url('./img/projetofinal.jpeg') center/contain no-repeat fixed; /* imagem menor */
+    background-size: contain; /* se ajusta sem cortar */
+    min-height: 300px; /* altura menor */
+    border-radius: 12px;
+    border: 3px solid var(--marrom-claro);
+    padding: 50px 10%;
+    text-align: center;
+    color: white;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infografico:hover {
+    transform: scale(1.01); /* leve destaque no hover */
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.25), 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.infografico h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.infografico p {
+    font-size: 1em;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    section { background-attachment: scroll; } /* desativa parallax no mobile */
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+    .infografico {
+        padding: 40px 5%;
+        min-height: 250px;
+    }
+    .infografico h2 {
+        font-size: 1.5em;
+    }
+    .infografico p {
+        font-size: 0.95em;
+    }
+}

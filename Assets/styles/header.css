@@ -1,0 +1,33 @@
+.topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2d6a4f;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.topo .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.topo ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.topo nav a{
+    color: #fff;
+    margin-left: 14px;
+    text-decoration: none;
+}
+.topo nav a:hover,
+.topo nav a.ativo {
+    text-decoration: underline;
+}
