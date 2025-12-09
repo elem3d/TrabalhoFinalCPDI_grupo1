@@ -9,26 +9,64 @@
 </head>
 <body>
     <header class="topo">
-        <div class="logo">Hygi</div>
+        <div class="logo">
+            <img src="./Assets/img/logo.jpg" alt="LOGO">
+            Hygi
+        </div>
         <nav>
             <ul>
-                <li><a href="#heroSection">Início</a></li>
-                <li><a href="#loja">Produtos</a></li>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/Páginas/loja.html">Produtos</a></li>
                 <li><a href="/Páginas/totens-descarte.html">Totens & Descarte</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
                 <li><a href="/Páginas/artigos.html">Artigos</a></li>
+                <li><a href="/Páginas/sobre.html">Sobre Nós</a></li>
                 <li><a href="/Páginas/index2.html">PÁGINA IVANA</a></li>
             </ul>
         </nav>
     </header>
     <main>
       
-        <section id="heroSection">
-            <h1>Hygi</h1>
-            <h2>Higiene sustentável para todas as gerações</h2>
+        <section id="heroSection" aria-label="Banner principal">
+            <div class="hero-inner">
+                <!-- imagem do banner (use ./img/hero.jpg ou troque o src) -->
+                <picture class="hero-picture">
+                <source media="(max-width:600px)" srcset="./Assets/img/hero1.jpeg">
+                <img src="./Assets/img/hero1.jpeg" alt="Banner Hygi - fraldas sustentáveis" class="hero-image">
+                </picture>
+
+                <!-- conteúdo sobreposto (texto + botão) -->
+                <div class="hero-overlay">
+                <h1>Bem-vinda à Hygi</h1>
+                <p>Fraldas ecológicas e soluções sustentáveis para o cuidado do seu bebê e do planeta.</p>
+                <a href="#produtosHome" class="cta-button">Explorar Produtos</a>
+                </div>
+            </div>
         </section>
-        <section id="loja">
+        <section id="produtosHome">
             <div class="produtos-grid">
+                <div class="produto-card">
+                    <img src="./Assets/img/fralda1.jpeg" alt="Fralda Ecológica Premium">
+                    <h3>Fralda Ecológica Premium</h3>
+                    <p>50 unidades — R$ 89,90</p>
+                </div>
+
+
+                <div class="produto-card">
+                    <img src="./Assets/img/fralda2.png" alt="Fralda Orgânica Reciclável">
+                    <h3>Fralda Orgânica Compostável</h3>
+                    <p>40 unidades — R$ 79,90</p>
+                </div>
+
+
+                <div class="produto-card">
+                    <img src="./Assets/img/fralda3.png" alt="Fralda Noturna Sustentável">
+                    <h3>Fralda Noturna Sustentável</h3>
+                    <p>30 unidades — R$ 99,90</p>
+                </div>
+            </div>
+            <a href="produtos.html" class="btn-vermais">Ver mais produtos</a>
+            
+            <div>
                 <div class="produto">
                     <div class="fotoProduto">
                         <img src="/Assets/img/fralda1.jpeg" alt="">

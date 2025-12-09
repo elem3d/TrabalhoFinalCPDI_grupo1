@@ -3,18 +3,19 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #2d6a4f;
+    height: 4rem;
+    background: var(--corVerde2);
     padding: 14px 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 999;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px var(--corMaisEscura);
 }
 .topo .logo {
-    color: #fff;
+    color: var(--corVerde3);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .topo ul {
@@ -23,7 +24,9 @@
 }
 
 .topo nav a{
-    color: #fff;
+    color: var(--corVerde3);
+    font-weight: 500;
+    font-size: 20px;
     margin-left: 14px;
     text-decoration: none;
 }

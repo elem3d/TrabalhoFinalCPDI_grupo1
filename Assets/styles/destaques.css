@@ -1,0 +1,42 @@
+.produtos-grid, .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    padding: 20px;
+}
+.produto-card, .card-produto, .product-card {
+    background: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    text-align: center;
+}
+.produto-card img, .card-produto img, .product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* ===== BOTÕES ===== */
+.cta-button,
+.btn-add,
+.btn-normal,
+.btn-vermais,
+.btn-artigo {
+    background: #2d6a4f;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.cta-button:hover,
+.btn-add:hover,
+.btn-normal:hover,
+.btn-artigo:hover {
+    background: #245e40;
+}
