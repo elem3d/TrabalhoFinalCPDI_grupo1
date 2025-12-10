@@ -29,10 +29,13 @@
             <div class="hero-inner">
                 <!-- imagem do banner (use ./img/hero.jpg ou troque o src) -->
                 <picture class="hero-picture">
-                    <source media="(max-width:600px)" srcset="./Assets/img/hero1.jpeg">
-                    <img src="./Assets/img/bebeDormindo.png" alt="Banner Hygi - fraldas sustentáveis" class="hero-image">
+                    <!-- source media="(max-width:600px)" srcset="/Assets/img/capa.jpeg"-->
+                    <img src="/Assets/img/hero2.png" alt="Banner Hygi - fraldas sustentáveis" class="hero-image">
+                    <div class="wave">
+                        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,500 L 0,125 C 59.655101339745784,140.4778426657506 119.31020267949157,155.9556853315012 191,145 C 262.68979732050843,134.0443146684988 346.4142906217795,96.65510133974578 420,107 C 493.5857093782205,117.34489866025422 557.0326348333906,175.42390930951564 619,168 C 680.9673651666094,160.57609069048436 741.4551700446583,87.64926142219169 815,82 C 888.5448299553417,76.35073857780831 975.1466849879766,137.97904500171762 1055,142 C 1134.8533150120234,146.02095499828238 1207.9580900034352,92.43455857093782 1271,80 C 1334.0419099965648,67.56544142906218 1387.0209549982824,96.28272071453108 1440,125 L 1440,500 L 0,500 Z" stroke="none" stroke-width="0" fill="#7a57ac" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)"></path><path d="M 0,500 L 0,291 C 77.33768464445208,302.9285468911027 154.67536928890416,314.8570937822054 214,306 C 273.32463071109584,297.1429062177946 314.63620748883545,267.500171762281 377,249 C 439.36379251116455,230.499828237719 522.7798007557541,223.14221916867052 604,249 C 685.2201992442459,274.8577808313295 764.2445894881486,333.9309515630368 844,327 C 923.7554105118514,320.0690484369632 1004.2418412916525,247.1339745791824 1060,236 C 1115.7581587083475,224.8660254208176 1146.7880453452422,275.5331501202336 1206,295 C 1265.2119546547578,314.4668498797664 1352.605977327379,302.7334249398832 1440,291 L 1440,500 L 0,500 Z" stroke="none" stroke-width="0" fill="#7a57ac" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 250)"></path></svg>
+                    </div>
                 </picture>
-
+                
                 <!-- conteúdo sobreposto (texto + botão) -->
                 <div class="hero-overlay">
                 <h1>Bem-vinda à Hygi</h1>
@@ -69,7 +72,6 @@
             <div class="cadastroContainer">
                 <div class="auth-card">
                     <h2>Crie sua conta</h2>
-
                     <form id="form-cadastro" action="#" method="post">
                         <label for="nome">Nome completo</label>
                         <input id="nome" name="nome" type="text" required>
@@ -90,12 +92,20 @@
                         </p>
                     </form>
                 </div>
+                <div class="imgCadastro">
+                    <img src="/Assets/img/ChatGPT Image 10 de dez. de 2025, 14_53_14.png" alt="Ilustração com ondas de uma mulher de olhos fechados">
+                </div>
             </div>
         </section>
         <section id="totens">
-            <h2>Totens de Coleta</h2>
-            <p>Instalamos totens de coleta inteligente que compactam fraldas usadas, reduzem o volume e facilitam a logística de reciclagem.</p>
-            <a href="totens-descarte.html" class="btn-normal">Saiba mais</a>
+            <div class="imgToten">
+                <img src="/Assets/img/Totem.png" alt="">
+            </div>
+            <div class="totensContainer">
+                <h2>Totens de Coleta</h2>
+                <p>Instalamos totens de coleta inteligente que compactam fraldas usadas, reduzem o volume e facilitam a logística de reciclagem.</p>
+                <a href="totens-descarte.html" class="btn-normal">Saiba mais</a>
+            </div>
         </section>
 
 

@@ -32,10 +32,6 @@ body{
     color: var(--corMaisEscura);
 }
 
-section{
-    padding: 30px 5%;
-}
-
 img {
     max-height: 300px;
 }

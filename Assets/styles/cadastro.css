@@ -2,10 +2,27 @@
     padding: 120px 20px 40px;
 }
 .cadastroContainer{
-    padding: 50px 400px;
+    padding: 0% 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: var(--corLaranja);
     color: var(--corEscura);
     font-weight: 700;
+}
+
+.imgCadastro{
+    height: 500px;
+    display: flex;
+
+}
+.imgCadastro img {
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.auth-card{
+    padding: 50px 400px 50px 100px;
 }
 .auth-card input {
     height: 50px;
