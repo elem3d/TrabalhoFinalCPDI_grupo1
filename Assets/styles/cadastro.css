@@ -4,7 +4,8 @@
 .cadastroContainer{
     padding: 50px 400px;
     background-color: var(--corLaranja);
-    color: var(--corClara);
+    color: var(--corEscura);
+    font-weight: 700;
 }
 .auth-card input {
     height: 50px;

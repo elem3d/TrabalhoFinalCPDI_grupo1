@@ -12,10 +12,9 @@
     z-index: 999;
     box-shadow: 0 2px 8px var(--corMaisEscura);
 }
-.topo .logo {
-    color: var(--corVerde3);
-    font-weight: 700;
-    font-size: 30px;
+
+.topo img {
+    height: 50px;
 }
 
 .topo ul {

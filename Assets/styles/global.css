@@ -17,7 +17,7 @@
     --fontSizeParagrafo: 20px;
     --fontSizeDetalhe: 17px;
     --corClara: #F2F2F0;
-    --corLaranja: #ec8a51;
+    --corLaranja: #ffa876;
     --corVerde1: #cfffdf;
     --corVerde2: #d0e584;
     --corVerde3: #24574e;
@@ -38,4 +38,7 @@ section{
 
 img {
     max-height: 300px;
+}
+main{
+    margin-top: 4rem;
 }

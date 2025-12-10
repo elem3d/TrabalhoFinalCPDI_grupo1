@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Totens & Descarte — Hygi</title>
+        <link rel="shortcut icon" href="/Assets/img/logo/favicon_io/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/main.css">
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <style>
+            /* Pequeno estilo local para o mapa e lista */
+            #map { width: 100%; height: 50vh; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+            .totens-wrapper { display:flex; gap:24px; flex-wrap:wrap; margin-top:18px; }
+            .totens-list { flex:1 1 320px; }
+            .totens-item { background:#fff; padding:12px; border-radius:8px; margin-bottom:10px; box-shadow:0 4px 12px rgba(0,0,0,0.04); }
+            .info-descarte { background:#fff; padding:16px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.04); margin-top:18px; }
+            @media (max-width:900px){ .totens-wrapper { flex-direction:column; } }
+        </style>
+    </head>
+    <body>
+        <header class="topo">
+            <div class="logo">
+                <img src="/Assets/img/logo/logoHygi-07.png" alt="LOGO">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/Páginas/loja.html">Produtos</a></li>
+                    <li><a href="/Páginas/totens-descarte.html">Totens & Descarte</a></li>
+                    <li><a href="/Páginas/artigos.html">Artigos</a></li>
+                    <li><a href="/Páginas/sobre.html">Sobre Nós</a></li>
+                    <li><a href="/Páginas/index2.html">PÁGINA IVANA</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main style="padding:100px 20px 40px;">
+            <h1>Totens de Coleta & Método de Descarte</h1>
+            <p>Nosso programa reúne a rede de totens de coleta e o processo seguro de descarte para fraldas e absorventes.</p>
+
+            <div class="totens-wrapper">
+            <div style="flex:2 1 480px;">
+                <div id="map"></div>
+            </div>
+
+
+            <div class="totens-list">
+                <h3>Totens próximos</h3>
+                <div id="lista-totens">
+                <!-- Lista populada por JS -->
+                </div>
+
+
+                <div class="info-descarte">
+                <h4>Método de Descarte</h4>
+                <ol>
+                    <li>Use o saco biodegradável que acompanha o produto.</li>
+                    <li>Feche e lacre o saco antes do descarte.</li>
+                    <li>Deposite no totem EcoCare mais próximo.</li>
+                    <li>Coletamos e encaminhamos para compostagem ou tratamento adequado.</li>
+                </ol>
+                </div>
+            </div>
+            </div>
+        </main>
+
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="./Páginas/EquipeDesenvolvedora.html">Conheça a Equipe</a></li>
+                </ul>
+            </nav>
+            <p>&copy; Hygi 2025 - Higiene sustentável / Todos os Direitos Reservados</p>
+        </footer>
+
+
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+        <script>
+            // Inicializar mapa (exemplo com Florianópolis). Troque coordenadas conforme necessário.
+            const map = L.map('map')?.setView([-27.5945, -48.5480], 13);
+
+
+            if (map) {
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+
+            // Lista de totens (exemplos — substitua pelos seus pontos)
+            const totems = [
+                { id: 1, name: 'Totem Beira-Mar', coords: [-27.5810, -48.5460], address: 'Av. Beira-Mar, 100' },
+                { id: 2, name: 'Totem Mercado Central', coords: [-27.5975, -48.5489], address: 'Rua Felipe Schmidt, 200' },
+                { id: 3, name: 'Totem Posto Verde', coords: [-27.5958, -48.5154], address: 'Av. Paulo Fontes, 300' }
+            ];
+
+
+            const lista = document.getElementById('lista-totens');
+
+
+            totems.forEach(t => {
+                // marcador no mapa
+                const marker = L.marker(t.coords).addTo(map);
+                marker.bindPopup(`<b>${t.name}</b><br>${t.address}`);
+
+
+                // item na lista com botão "ver no mapa"
+                const div = document.createElement('div');
+                div.className = 'totens-item';
+                div.innerHTML = `
+                <strong>${t.name}</strong>
+                <div style="font-size:14px; color:#555; margin:8px 0;">${t.address}</div>
+                <button class="ver-mapa" data-lat="${t.coords[0]}" data-lng="${t.coords[1]}">Ver no mapa</button>
+                `;
+                lista.appendChild(div);
+            });
+
+
+            // evento delegação para botões "ver no mapa"
+            document.addEventListener('click', (e) => {
+                if (e.target && e.target.matches('.ver-mapa')) {
+                const lat = parseFloat(e.target.dataset.lat);
+                const lng = parseFloat(e.target.dataset.lng);
+                map.setView([lat, lng], 17, { animate: true });
+                }
+            });
+            } else {
+            // caso não exista #map (por segurança)
+            document.getElementById('lista-totens')?.insertAdjacentHTML('beforebegin', '<p>Não foi possível inicializar o mapa.</p>');
+            }
+        </script>
+    </body>
+</html>
