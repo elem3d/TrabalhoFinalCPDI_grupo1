@@ -1,0 +1,228 @@
+
+#artigo1, #artigo2 {
+    width: 100%;
+    max-width: 1200px; /* Limita a largura para leitura confortável */
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Espaçamento entre os artigos */
+section + section {
+    margin-top: 4rem;
+    border-top: 1px solid var(--corVerde2); /* Divisor sutil */
+    padding-top: 4rem;
+}
+
+/* ==========================================================================
+   CABEÇALHO DO ARTIGO (TITULOS)
+   ========================================================================== */
+
+.articleHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.articleHeader h1 {
+    font-family: var(--fonteDecorativa);
+    font-size: 3.5rem; /* Tamanho ajustado para destaque */
+    color: var(--corVerde3);
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.articleHeader h2 {
+    font-family: var(--fontePrimaria);
+    font-size: 1.5rem;
+    color: var(--corEscura);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ==========================================================================
+   CONTEÚDO DO TEXTO
+   ========================================================================== */
+
+.article-content, .articleContent { /* Tratando ambas as classes usadas no HTML */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--corMaisEscura);
+    max-width: 900px;
+    margin: 0 auto; /* Centraliza o texto */
+}
+
+.article-content h3, .articleContent h3 {
+    font-family: var(--fontePrimaria);
+    font-size: 2rem;
+    color: var(--corLavanda);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--corVerde1);
+    display: inline-block;
+}
+
+.article-content p, .articleContent p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   CAIXAS DE DESTAQUE E ALERTAS
+   ========================================================================== */
+
+/* Caixa de destaque (Usada para Dados Alarmantes e Tempo de Degradação) */
+.highlight-box {
+    background-color: #fff0e6; /* Laranja muito claro */
+    border-left: 5px solid var(--corLaranja);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.highlight-box strong {
+    color: var(--corEscura);
+    font-weight: 700;
+}
+
+/* Caixa de Benefícios (Usada para compostáveis e ODS) */
+.benefit-box {
+    background-color: var(--corVerde1);
+    border-left: 5px solid var(--corVerde3);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    color: var(--corVerde3);
+}
+
+/* ==========================================================================
+   ESTATÍSTICAS (CARDS)
+   ========================================================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.stat-card {
+    background-color: var(--corBranco);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--corVerde1);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--corVerde2);
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--corLavanda);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.stat-card .number {
+    font-family: var(--fonteDecorativa);
+    font-size: 2.5rem;
+    color: var(--corVerde3);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* ==========================================================================
+   LISTAS PERSONALIZADAS
+   ========================================================================== */
+
+/* Lista de Alerta (Problemas) */
+.list-alert {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.list-alert li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.list-alert li::before {
+    content: "⚠️"; /* Emoji como marcador */
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* Lista de Checagem (Soluções/Benefícios) */
+.list-check {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.list-check li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.list-check li::before {
+    content: "✔";
+    color: var(--corVerde3);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* ==========================================================================
+   CONTAINER ODS (Objetivos de Desenvolvimento Sustentável)
+   ========================================================================== */
+
+.ODSContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ODSContainer .benefit-box {
+    margin: 0; /* Remove margem padrão para funcionar bem no grid */
+    height: 100%; /* Faz todas as caixas terem a mesma altura */
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .articleHeader h1 {
+        font-size: 2.5rem;
+    }
+    
+    .articleHeader h2 {
+        font-size: 1.2rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr; /* Um card por linha no mobile */
+    }
+
+    .article-content, .articleContent {
+        padding: 0 0.5rem;
+    }
+}
