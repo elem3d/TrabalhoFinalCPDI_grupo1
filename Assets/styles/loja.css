@@ -41,3 +41,226 @@
 .produto h1:hover {
     color: var(--corEscura);
 }
+
+/* ==========================================================================
+   ESTILOS GERAIS DA LOJA
+   ========================================================================== */
+
+.loja-main {
+    position: relative; /* Para posicionar os elementos decorativos absolutos */
+    overflow-x: hidden; /* Evita scroll horizontal por causa dos SVGs */
+    padding-bottom: 4rem;
+    margin-top: 4rem; /* Compensa o header fixo */
+}
+
+/* Hero da Loja */
+.loja-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--corBranco);
+}
+
+.loja-hero h1 {
+    font-family: var(--fonteDecorativa);
+    font-size: 3.5rem;
+    color: var(--corVerde3);
+    margin-bottom: 0.5rem;
+}
+
+.loja-hero p {
+    font-size: 1.2rem;
+    color: var(--corEscura);
+}
+
+/* ==========================================================================
+   CATEGORIAS E GRID
+   ========================================================================== */
+
+.categoria-produtos {
+    padding: 2rem 5% 4rem 5%;
+    position: relative;
+    z-index: 2; /* Fica acima da decoração de fundo */
+}
+
+.fundo-suave {
+    background-color: var(--corVerde1); /* Fundo leve para separar seções */
+    padding-top: 4rem; /* Espaço para a onda SVG */
+    margin-top: -10px; /* Junta com a onda */
+}
+
+.titulo-categoria {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.titulo-categoria h2 {
+    font-family: var(--fonteDecorativa);
+    font-size: 2.5rem;
+    color: var(--corLavanda);
+}
+
+.linha-decorativa {
+    width: 80px;
+    height: 4px;
+    background-color: var(--corLaranja);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   CARDS DE PRODUTO
+   ========================================================================== */
+
+.produto-card {
+    background: var(--corBranco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--corVerde2);
+}
+
+.img-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    transition: transform 0.5s ease;
+}
+
+.produto-card:hover .img-container img {
+    transform: scale(1.05); /* Zoom suave na imagem ao passar o mouse */
+}
+
+.info-produto {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.info-produto h3 {
+    font-family: var(--fontePrimaria);
+    font-weight: 700;
+    color: var(--corVerde3);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info-produto .descricao {
+    font-size: 0.9rem;
+    color: var(--corMaisEscura);
+    margin-bottom: 15px;
+    line-height: 1.4;
+    flex-grow: 1; /* Empurra o preço e botão para baixo */
+}
+
+.info-produto .preco {
+    font-size: 1.1rem;
+    color: var(--corEscura);
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    background-color: var(--corVerde3);
+    color: var(--corBranco);
+    border: none;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-family: var(--fontePrimaria);
+}
+
+.btn-comprar:hover {
+    background-color: var(--corLaranja);
+}
+
+/* ==========================================================================
+   DECORAÇÕES SVG (BACKGROUNDS)
+   ========================================================================== */
+
+/* Onda divisória entre seções */
+.divisoria-onda svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+/* Decoração Lateral Esquerda (Forma orgânica verde) */
+.decoracao-lateral-esq {
+    position: absolute;
+    top: 150px;
+    left: -50px;
+    width: 300px;
+    height: 400px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23d0e584' d='M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,71.6,33.1C61,44.7,51.1,55,39.6,63.2C28.1,71.4,15,77.5,1.1,75.6C-12.8,73.7,-27.6,63.8,-40.3,54.4C-53,45,-63.7,36.1,-70.8,24.6C-77.9,13.1,-81.5,-1,-78.9,-13.9C-76.3,-26.8,-67.5,-38.5,-56.6,-47.3C-45.7,-56.1,-32.7,-62,-19.9,-65.9C-7.1,-69.8,5.5,-71.7,17.8,-73.4L44.7,-76.4Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+/* Decoração Lateral Direita (Forma orgânica laranja/lavanda) */
+.decoracao-lateral-dir {
+    position: absolute;
+    bottom: 100px;
+    right: -80px;
+    width: 400px;
+    height: 400px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffa876' d='M41.4,-70.3C52.6,-65.1,59.9,-51.7,67.3,-39C74.7,-26.3,82.2,-14.3,81.4,-2.7C80.6,8.9,71.5,20.1,62.6,30.3C53.7,40.5,45,49.7,34.8,56.1C24.6,62.5,12.9,66.1,0.5,65.3C-11.9,64.5,-25.3,59.3,-37.2,51.9C-49.1,44.5,-59.5,34.9,-65.8,23C-72.1,11.1,-74.3,-3.1,-70.7,-15.8C-67.1,-28.5,-57.7,-39.7,-47.1,-48.6C-36.5,-57.5,-24.7,-64.1,-12.3,-66.2C0.1,-68.3,13.7,-65.9,30.2,-75.5L41.4,-70.3Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .loja-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .titulo-categoria h2 {
+        font-size: 2rem;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .img-container {
+        height: 200px;
+    }
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre a Hygi</title>
+    <title>Loja Hygi - Produtos Sustentáveis</title>
     <link rel="stylesheet" href="/main.css">
     <link rel="shortcut icon" href="/Assets/img/logo/favicon_io/favicon.ico" type="image/x-icon">
 </head>
@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <li><a href="/index.html">Início</a></li>
-                <li><a href="/Páginas/loja.html">Produtos</a></li>
+                <li><a href="/Páginas/loja.html" class="ativo">Produtos</a></li>
                 <li><a href="/Páginas/totens-descarte.html">Totens & Descarte</a></li>
                 <li><a href="/Páginas/artigos.html">Artigos</a></li>
                 <li><a href="/Páginas/sobre.html">Sobre Nós</a></li>
@@ -23,142 +23,152 @@
             </ul>
         </nav>
     </header>
-    <main>
 
-        <section class="paginaProdutos">
-            <h2>Nossos Produtos</h2>
+    <main class="loja-main">
+        
+        <div class="decoracao-lateral-esq"></div>
 
-            <div class="produtos-grid">
-
-
-                <div class="produto-card">
-                    <img src="/Assets/img/fralda1.jpeg">
-                    <h3>Fralda Ecológica Premium</h3>
-                    <p>50 unidades — R$ 89,90</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-
-
-                <div class="produto-card">
-                    <img src="/Assets/img/fralda2.png">
-                    <h3>Fralda Orgânica Compostável</h3>
-                    <p>40 unidades — R$ 79,90</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-
-
-                <div class="produto-card">
-                    <img src="/Assets/img/fralda3.png">
-                    <h3>Fralda Sustentável Noturna</h3>
-                    <p>30 unidades — R$ 99,90</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-
-
-                <div class="produto-card">
-                    <img src="/Assets/img/fralda4.jpeg">
-                    <h3>Kit Fraldas Ecológicas</h3>
-                    <p>100 unidades — R$ 149,90</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-
-
-                <div class="produto-card">
-                    <img src="/Assets/img/fralda5.png">
-                    <h3>Fralda Biodegradável Infantil</h3>
-                    <p>60 unidades — R$ 109,90</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-
-
-                <div class="produto-card">
-                    <img src="/Assets/img/fralda6.png">
-                    <h3>Fralda Verde para Bebês</h3>
-                    <p>45 unidades — R$ 94,90</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-
-
-            </div>
-
-
+        <section class="loja-hero">
+            <h1>Nossa Loja</h1>
+            <p>Escolha o melhor para sua família e para o planeta. Produtos 100% compostáveis.</p>
         </section>
 
+        <section class="categoria-produtos" id="fraldas">
+            <div class="titulo-categoria">
+                <h2>Fraldas Ecológicas</h2>
+                <div class="linha-decorativa"></div>
+            </div>
 
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/fralda1.jpeg" alt="Fralda Estampa Folhas Secas">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Fralda Tom de Terra</h3>
+                        <p class="descricao">Estampa de folhas secas, toque suave e hipoalergênica.</p>
+                        <p class="preco">50 unidades — <strong>R$ 89,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
 
-        <div>
-            <div class="produto">
-                <div class="fotoProduto">
-                    <img src="/Assets/img/fralda1.jpeg" alt="">
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/fralda2.png" alt="Fralda Tons de Verde">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Fralda Floresta</h3>
+                        <p class="descricao">Tons de verde vibrantes, 100% compostável.</p>
+                        <p class="preco">40 unidades — <strong>R$ 79,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
                 </div>
-                <div class="descricaoProduto">
-                    <h1><a href="#">Fralda tom de terra</a></h1>
-                    <p>
-                    Essa fralda é 100% compostável com  tom de terra leves  com  desenhos de folhinhas secas é hipoalergenica para a saúde de seu baby
-                    </p>
+
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/fralda3.png" alt="Fralda Azul Suave">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Fralda Brisa Leve</h3>
+                        <p class="descricao">Tons de azul e verde, proteção noturna segura.</p>
+                        <p class="preco">30 unidades — <strong>R$ 99,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
                 </div>
-            </div>
-            <div class="produto">
-                <div class="fotoProduto">
-                    <img src="/Assets/img/fralda2.png" alt="">
+
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/fralda4.jpeg" alt="Fralda Colorida">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Fralda Outono</h3>
+                        <p class="descricao">Mistura de verde, laranja e tons terrosos.</p>
+                        <p class="preco">40 unidades — <strong>R$ 84,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
                 </div>
-                <div class="descricaoProduto">
-                    <p>
-                        Essa  fraldinha tem diferente tons de verde com desenhos de folhas da  floresta e  é 100% compostável alem de ser hipoalergenica para seu baby
-                    </p>
+
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/fralda5.png" alt="Fralda Fundo do Mar">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Fralda Oceano</h3>
+                        <p class="descricao">Estampa de corais e vida marinha. Ajude os oceanos.</p>
+                        <p class="preco">60 unidades — <strong>R$ 109,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
                 </div>
-            </div>
-            <div class="produto">
-                <div class="fotoProduto">
-                    <img src="/Assets/img/fralda3.png" alt="">
-                </div>
-                <div class="descricaoProduto">
-                    <p>
-                    esta fralda só muda as cores  que sao    tons  de azul e de verde  a funçao é igual  que é hipoalergenica e 100% compostável para a saúde de seus babys 
-                    </p>
-                </div>
-            </div>
-            <div class="produto">
-                <div class="fotoProduto">
-                    <img src="/Assets/img/fralda4.jpeg" alt="">
-                </div>
-                <div class="descricaoProduto">
-                    <p>
-                    as cores dessa fralda  sao verde clarinho , verde escuro,laranjinha e é hipoalergenica para seus babys e 100%compostável
-                </div>
-            </div>
-            <div class="produto">
-                <div class="fotoProduto">
-                    <img src="/Assets/img/fralda5.png" alt="">
-                </div>
-                <div class="descricaoProduto">
-                    <p>
-                    Essa fralda 100%compostável tem desenhos de plantinhas do  fundo do mar nas cores verde ,azul e alguns tons de marrom e laranja e sao hipoalergenicas para os babys 
-                    </p>
-                </div>
-            </div>
-            <div class="produto">
-                <div class="fotoProduto">
-                    <a href="#"><img src="/Assets/img/fralda6.png" alt=""></a>
-                </div>
-                <div class="descricaoProduto">
-                    <p>
-                        Essa fralda que é 100%compostável e hipoalergenica para seus babys ela tem os desenhos de peixinhos  e plantinhas  do mar nas cores rosa clarinho ,verde  ,azulzinho ,amarelo ,laranjinha e alguns tons de marrom 
-                    </p>
-                </div>
-            </div>
-            <div class="produto">
-                <div class="fotoProduto">
-                    <img src="/Assets/img/fralda7.jpeg" alt="">
-                </div>
-                <div class="descricaoProduto">
-                    <p>Essa  fralda  tem diferente tons de verde com desenhos de folhas da  floresta e  é 100% compostável alem de ser hipoalergenica para seu baby e cuida da saude de seu  bebe 
-                    </p>
+
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/fralda6.png" alt="Fralda Peixinhos">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Fralda Vida Marinha</h3>
+                        <p class="descricao">Peixinhos e plantinhas em tons pastéis.</p>
+                        <p class="preco">45 unidades — <strong>R$ 94,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
                 </div>
             </div>
-            
+        </section>
+
+        <div class="divisoria-onda">
+            <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path fill="#cfffdf" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+            </svg>
         </div>
+
+        <section class="categoria-produtos fundo-suave" id="absorventes">
+            <div class="titulo-categoria">
+                <h2>Absorventes Compostáveis</h2>
+                <div class="linha-decorativa"></div>
+            </div>
+
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/ecoabsorvente.png" alt="Absorvente Ecológico Unitário">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Absorvente Eco Diário</h3>
+                        <p class="descricao">Delicado para você e para o planeta. Fluxo leve a moderado.</p>
+                        <p class="preco">Pacote com 10 — <strong>R$ 22,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/absorventes/caixa1.png" alt="Caixa Absorventes Hygi">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Kit Ciclo Completo</h3>
+                        <p class="descricao">Caixa mista com 20 unidades (Dia e Noite).</p>
+                        <p class="preco">Caixa — <strong>R$ 39,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="produto-card">
+                    <div class="img-container">
+                        <img src="/Assets/img/absorventes/ChatGPT Image 10 de dez. de 2025, 21_15_52.png" alt="Caixa Absorventes Noturnos">
+                    </div>
+                    <div class="info-produto">
+                        <h3>Absorvente Noturno</h3>
+                        <p class="descricao">Maior proteção e conforto para suas noites. 100% algodão orgânico.</p>
+                        <p class="preco">Pacote com 8 — <strong>R$ 25,90</strong></p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="decoracao-lateral-dir"></div>
+
     </main>
+
     <footer>
         <nav>
             <ul>
