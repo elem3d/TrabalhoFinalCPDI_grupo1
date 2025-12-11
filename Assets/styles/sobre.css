@@ -1,0 +1,283 @@
+/* Espaçamento geral do main para não colar no header fixo */
+main {
+    margin-top: 4rem; 
+}
+
+/* --- HERO SECTION --- 
+   Uma introdução suave e inspiradora */
+#sobre-hero {
+    background-color: var(--corVerde1); /* Fundo verde claro suave */
+    padding: 80px 20px;
+    text-align: center;
+    background-image: url('/Assets/img/capa.png'); /* Usando a imagem de capa disponível */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--corBranco);
+}
+
+/* Overlay para garantir leitura do texto na imagem */
+#sobre-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(36, 87, 78, 0.7); /* Verde escuro com transparência */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-family: var(--fonteDecorativa);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/* --- SEÇÃO DIFERENCIAL (O CICLO) ---
+   Destaque principal da página */
+#diferencial-ciclo {
+    padding: 80px 20px;
+    background-color: var(--corBranco);
+}
+
+.container-ciclo {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+.texto-diferencial {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto-diferencial h2 {
+    font-family: var(--fonteDecorativa);
+    font-size: 2.5rem;
+    color: var(--corVerde3);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.texto-diferencial h2 span {
+    color: var(--corLaranja); /* Destaque em laranja */
+}
+
+.texto-diferencial p {
+    font-size: 1.1rem;
+    color: var(--corMaisEscura);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.lista-diferencial {
+    margin: 30px 0;
+    list-style: none;
+}
+
+.lista-diferencial li {
+    background-color: var(--corVerde1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid var(--corVerde3);
+    font-weight: 600;
+    color: var(--corVerde3);
+}
+
+.imagem-totem {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.imagem-totem img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px; /* Limita altura para não estourar */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Sombra elegante */
+}
+
+/* --- SEÇÃO MVP (Missão, Visão, Propósito) --- */
+#pilares {
+    padding: 60px 20px;
+    background-color: var(--corClara);
+}
+
+.grid-pilares {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-pilar {
+    background: var(--corBranco);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border-bottom: 5px solid var(--corVerde2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card-pilar:hover {
+    transform: translateY(-5px);
+}
+
+.card-pilar h3 {
+    font-family: var(--fonteDecorativa);
+    color: var(--corLavanda);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-pilar p {
+    color: var(--corMaisEscura);
+    line-height: 1.6;
+}
+
+/* Destaque especial para o Propósito (item maior) */
+.destaque-proposito {
+    background-color: var(--corVerde3);
+    border: none;
+}
+
+.destaque-proposito h3 {
+    color: var(--corVerde1);
+}
+
+.destaque-proposito p {
+    color: var(--corClara);
+    font-size: 1.1rem;
+}
+
+/* --- SEÇÃO VALORES --- */
+#valores {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--corBranco);
+}
+
+#valores h2 {
+    font-family: var(--fonteDecorativa);
+    font-size: 3rem;
+    color: var(--corVerde3);
+    margin-bottom: 10px;
+}
+
+.subtitulo-valores {
+    color: var(--corEscura);
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+.grid-valores {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.valor-item {
+    padding: 20px;
+}
+
+.valor-item .emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.valor-item h4 {
+    color: var(--corLaranja);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.valor-item p {
+    color: var(--corMaisEscura);
+    font-size: 0.95rem;
+}
+
+/* --- SEÇÃO CONVITE FINAL --- */
+#convite {
+    background-color: var(--corLaranja);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--corEscura);
+}
+
+#convite h2 {
+    font-family: var(--fonteDecorativa);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* --- BOTÕES --- */
+.btn-cta {
+    display: inline-block;
+    background-color: var(--corEscura);
+    color: var(--corClara);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: var(--corLavanda);
+}
+
+.btn-cta-inverso {
+    display: inline-block;
+    background-color: var(--corBranco);
+    color: var(--corLaranja);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.btn-cta-inverso:hover {
+    transform: scale(1.05);
+    background-color: var(--corVerde3);
+    color: var(--corBranco);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .container-ciclo {
+        flex-direction: column;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .texto-diferencial h2 {
+        font-size: 2rem;
+    }
+}
