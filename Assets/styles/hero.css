@@ -37,7 +37,7 @@ picture {
   display: flex;
   align-items: baseline;
   object-fit: cover;  /* ajusta corte proporcional */
-  object-position: bottom;
+  object-position: center;
     /* filter: brightness(0.45);  escurece levemente para destacar texto */
 }
 
